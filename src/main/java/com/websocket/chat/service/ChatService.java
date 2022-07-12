@@ -27,7 +27,7 @@ public class ChatService {
     }
 
     /**
-     * 채팅방에 메시지 발송
+     * publisher 역할 및  채팅방에 메시지 발송
      */
     public void sendChatMessage(ChatMessage chatMessage) {
         chatMessage.setUserCount(chatRoomRepository.getUserCount(chatMessage.getRoomId()));

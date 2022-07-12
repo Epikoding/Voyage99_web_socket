@@ -25,7 +25,7 @@ public class RedisConfig {
     }
 
     /**
-     * redis에 발행(publish)된 메시지 처리를 위한 리스너 설정
+     * redis를 경청하고 있다가 메시지 publish가 오면 Listener가 처리
      */
     @Bean
     public RedisMessageListenerContainer redisMessageListener(RedisConnectionFactory connectionFactory,
@@ -46,7 +46,7 @@ public class RedisConfig {
     }
 
     /**
-     * 어플리케이션에서 사용할 redisTemplate 설정
+     * pub/sub에 사용할 redisTemplate 설정
      */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
